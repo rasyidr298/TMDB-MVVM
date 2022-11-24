@@ -1,6 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-moviedb/Pods-moviedb-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
 ${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
 ${BUILT_PRODUCTS_DIR}/netfox/netfox.framework
-${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework

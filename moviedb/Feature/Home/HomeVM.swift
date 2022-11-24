@@ -30,8 +30,16 @@ class HomeVM {
     return _movies.asDriver()
   }
   
+  var numberOfMovies: Int {
+    return _movies.value.count
+  }
+  
   var error: Driver<String?> {
     return _error.asDriver()
+  }
+  
+  var hasError: Bool {
+    return _error.value != nil
   }
   
   func fetchMovies(page: Int) {
@@ -40,12 +48,16 @@ class HomeVM {
     self._error.accept(nil)
     
     movieService.fetchMovies(page: page, successHandler: {[weak self] (response) in
-      self?._isFetching.accept(false)
-      self?._movies.accept(response.results)
+      guard let self = self else {return}
+      
+      self._isFetching.accept(false)
+      self._movies.accept(response.results)
       
     }) { [weak self] (error) in
-      self?._isFetching.accept(false)
-      self?._error.accept(error.localizedDescription)
+      guard let self = self else {return}
+      
+      self._isFetching.accept(false)
+      self._error.accept(error.localizedDescription)
     }
   }
   

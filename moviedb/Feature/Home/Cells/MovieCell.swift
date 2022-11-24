@@ -6,18 +6,15 @@
 //
 
 import UIKit
+import Kingfisher
 
-class MovieCell: UITableViewCell {
+class MovieCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+  @IBOutlet weak var lblTitle: UILabel!
+  @IBOutlet weak var imgPoster: UIImageView!
+  
+  func configure(movie: Movie) {
+    lblTitle.text = movie.title
+    imgPoster.kf.setImage(with: movie.posterURL)
+  }
 }
