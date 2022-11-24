@@ -6,13 +6,11 @@
 //
 
 import Foundation
-import RxSwift
 import RxCocoa
 
 class HomeVM {
   
   private let movieService: MovieService
-  private let disposeBag = DisposeBag()
   
   init(movieService: MovieService) {
     self.movieService = movieService
@@ -47,17 +45,17 @@ class HomeVM {
     self._isFetching.accept(true)
     self._error.accept(nil)
     
-    movieService.fetchMovies(page: page, successHandler: {[weak self] (response) in
+    movieService.fetchMovies(page: page) {[weak self] result in
       guard let self = self else {return}
       
-      self._isFetching.accept(false)
-      self._movies.accept(response.results)
-      
-    }) { [weak self] (error) in
-      guard let self = self else {return}
-      
-      self._isFetching.accept(false)
-      self._error.accept(error.localizedDescription)
+      switch result {
+      case .success(let movies):
+        self._isFetching.accept(false)
+        self._movies.accept(movies.results)
+      case .failure(let error):
+        self._isFetching.accept(false)
+        self._error.accept(error.localizedDescription)
+      }
     }
   }
   
