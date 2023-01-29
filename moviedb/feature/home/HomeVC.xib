@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="moviedb" customModuleProvider="target">
+            <connections>
+                <outlet property="actIndicator" destination="wpp-j5-MoX" id="z1T-In-eiw"/>
+                <outlet property="clvMovie" destination="lyk-YP-ucK" id="bbH-0H-oBb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lyk-YP-ucK">
+                    <rect key="frame" x="0.0" y="47" width="375" height="765"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="baX-nx-6bY">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="wpp-j5-MoX">
+                    <rect key="frame" x="167.66666666666666" y="386" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="J2I-Yb-QUH"/>
+                        <constraint firstAttribute="width" constant="40" id="b2E-Z2-zr1"/>
+                    </constraints>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="lyk-YP-ucK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9iL-pQ-LiU"/>
+                <constraint firstItem="wpp-j5-MoX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GSg-uU-9FJ"/>
+                <constraint firstItem="wpp-j5-MoX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UVU-6M-dSg"/>
+                <constraint firstAttribute="bottom" secondItem="lyk-YP-ucK" secondAttribute="bottom" id="a3T-qD-jq8"/>
+                <constraint firstItem="lyk-YP-ucK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="alp-dB-TTP"/>
+                <constraint firstItem="lyk-YP-ucK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qwF-gN-VlN"/>
+            </constraints>
+            <point key="canvasLocation" x="52" y="-11.083743842364532"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

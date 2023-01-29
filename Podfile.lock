@@ -1,34 +1,50 @@
 PODS:
+  - Alamofire (5.6.2)
   - Kingfisher (6.3.1)
+  - lottie-ios (3.5.0)
   - netfox (1.21.0)
+  - ObjectMapper (4.2.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
+  - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Kingfisher
+  - lottie-ios
   - netfox
+  - ObjectMapper
   - RxCocoa
   - RxSwift
+  - SnapKit
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Kingfisher
+    - lottie-ios
     - netfox
+    - ObjectMapper
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SnapKit
 
 SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 4868a94bee65cc3fbd5df69ce7db43b0f101515f
+PODFILE CHECKSUM: 3fda0d6326b1399a224b4624374fd0a36fb5d0ad
 
 COCOAPODS: 1.11.3

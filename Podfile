@@ -6,6 +6,10 @@ def general_pod
   pod 'RxSwift'
   pod 'netfox'
   pod 'Kingfisher'
+  pod 'Alamofire'
+  pod 'ObjectMapper'
+  pod 'lottie-ios'
+  pod 'SnapKit'
 end
 
 
