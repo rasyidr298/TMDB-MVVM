@@ -7,7 +7,6 @@ def general_pod
   pod 'netfox'
   pod 'Kingfisher'
   pod 'Alamofire'
-  pod 'ObjectMapper'
   pod 'lottie-ios'
   pod 'SnapKit'
 end
